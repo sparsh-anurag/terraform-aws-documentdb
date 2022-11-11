@@ -54,6 +54,7 @@ variable "db_username" {
 variable "db_password" {
   description = "value"
   type        = string
+  sensitive   = true
 }
 
 variable "backup_retention_period" {
@@ -117,7 +118,7 @@ variable "vpc_security_group_ids" {
 variable "instance_class" {
   description = "value"
   type        = string
-  default     = "db.t4g.medium"
+  default     = "db.t3.medium"
 }
 
 variable "instance_apply_immediately" {
